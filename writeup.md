@@ -50,9 +50,12 @@ My pipeline consisted of 5 steps.
 * When I modified draw_lines() to draw solid lines, the lines are now a bit "twitchier" because they are computed from the found min/max x and y values.
 * I am using statically configured values for the masking and line lengths, somehow finding optimal values for these seems like a better solution.
 * I assume a straight line in draw_lines, I don't believe this will handle a sharp curve well.
+* If the car hood is seen (as in the challenge video) this is thrown entirely off.
+* Even accounting for the car hood, my lines are all over the place in the challenge.
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-* Finding a way to smooth the lines between frames seems like it would result in more accurate lines.  Perhaps only some specified maximum change or deviation?
+* Finding a way to smooth the lines between frames seems like it would result in more accurate lines.  Perhaps only some specified maximum change or deviation between frames?
 * If I modified draw_lines() further to track and connect line segments rather than drawing one large line this seems like it could be a better solution to getting lines to track better.
+* Better tweaking of the Canny parameters (maybe some way to auto do this by gradient of image) might get better line detection.

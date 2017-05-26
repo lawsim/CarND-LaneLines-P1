@@ -1,5 +1,3 @@
-*_output
-
 # other misc standard ignores
 *.pickle
 *.zip
