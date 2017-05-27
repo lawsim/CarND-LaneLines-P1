@@ -11897,7 +11897,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.image.AxesImage at 0x21c23eef8d0&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x23a33f936d8&gt;</pre>
 </div>
 
 </div>
@@ -13753,7 +13753,7 @@ EP1W22pbbavdw9v/B48rs7cxFkAbAAAAAElFTkSuQmCC
     <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">gray</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
 
     <span class="c1"># apply additional gaussian smoothing (canny applies also)</span>
-    <span class="n">kernel_size</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">kernel_size</span> <span class="o">=</span> <span class="mi">3</span>
     <span class="n">blur_gray</span> <span class="o">=</span> <span class="n">gaussian_blur</span><span class="p">(</span><span class="n">gray</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">)</span>
 
     <span class="c1"># define parameters and apply Canny</span>
@@ -13788,9 +13788,9 @@ EP1W22pbbavdw9v/B48rs7cxFkAbAAAAAElFTkSuQmCC
     <span class="c1"># define parameters for hough transform</span>
     <span class="n">rho</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># distance resolution in pixels of the Hough grid</span>
     <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span> <span class="c1"># angular resolution in radians of the Hough grid</span>
-    <span class="n">threshold</span> <span class="o">=</span> <span class="mi">30</span>     <span class="c1"># minimum number of votes (intersections in Hough grid cell)</span>
-    <span class="n">min_line_length</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1">#minimum number of pixels making up a line</span>
-    <span class="n">max_line_gap</span> <span class="o">=</span> <span class="mi">100</span>    <span class="c1"># maximum gap in pixels between connectable line segments</span>
+    <span class="n">threshold</span> <span class="o">=</span> <span class="mi">55</span>     <span class="c1"># minimum number of votes (intersections in Hough grid cell)</span>
+    <span class="n">min_line_length</span> <span class="o">=</span> <span class="mi">50</span> <span class="c1">#minimum number of pixels making up a line</span>
+    <span class="n">max_line_gap</span> <span class="o">=</span> <span class="mi">200</span>    <span class="c1"># maximum gap in pixels between connectable line segments</span>
 
     <span class="c1"># apply hough transform</span>
     <span class="n">line_image</span> <span class="o">=</span> <span class="n">hough_lines</span><span class="p">(</span><span class="n">masked_edges</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">threshold</span><span class="p">,</span> <span class="n">min_line_length</span><span class="p">,</span> <span class="n">max_line_gap</span><span class="p">)</span>
@@ -14857,7 +14857,7 @@ imageio.plugins.ffmpeg.download()</code></pre>
     <span class="n">gray</span> <span class="o">=</span> <span class="n">grayscale</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 
     <span class="c1"># apply additional gaussian smoothing (canny applies also)</span>
-    <span class="n">kernel_size</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">kernel_size</span> <span class="o">=</span> <span class="mi">3</span>
     <span class="n">blur_gray</span> <span class="o">=</span> <span class="n">gaussian_blur</span><span class="p">(</span><span class="n">gray</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">)</span>
 
     <span class="c1"># define parameters and apply Canny</span>
@@ -14873,11 +14873,11 @@ imageio.plugins.ffmpeg.download()</code></pre>
     <span class="n">masked_edges</span> <span class="o">=</span> <span class="n">region_of_interest</span><span class="p">(</span><span class="n">edges</span><span class="p">,</span> <span class="n">vertices</span><span class="p">)</span>
 
     <span class="c1"># define parameters for hough transform</span>
-    <span class="n">rho</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># distance resolution in pixels of the Hough grid</span>
+    <span class="n">rho</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># distance resolution in pixels of the Hough grid</span>
     <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span> <span class="c1"># angular resolution in radians of the Hough grid</span>
-    <span class="n">threshold</span> <span class="o">=</span> <span class="mi">15</span>     <span class="c1"># minimum number of votes (intersections in Hough grid cell)</span>
-    <span class="n">min_line_length</span> <span class="o">=</span> <span class="mi">40</span> <span class="c1">#minimum number of pixels making up a line</span>
-    <span class="n">max_line_gap</span> <span class="o">=</span> <span class="mi">20</span>    <span class="c1"># maximum gap in pixels between connectable line segments</span>
+    <span class="n">threshold</span> <span class="o">=</span> <span class="mi">55</span>     <span class="c1"># minimum number of votes (intersections in Hough grid cell)</span>
+    <span class="n">min_line_length</span> <span class="o">=</span> <span class="mi">50</span> <span class="c1">#minimum number of pixels making up a line</span>
+    <span class="n">max_line_gap</span> <span class="o">=</span> <span class="mi">200</span>    <span class="c1"># maximum gap in pixels between connectable line segments</span>
 
     <span class="c1"># apply hough transform</span>
     <span class="n">line_image</span> <span class="o">=</span> <span class="n">hough_lines</span><span class="p">(</span><span class="n">masked_edges</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">threshold</span><span class="p">,</span> <span class="n">min_line_length</span><span class="p">,</span> <span class="n">max_line_gap</span><span class="p">)</span>
@@ -14905,7 +14905,7 @@ imageio.plugins.ffmpeg.download()</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">white_output</span> <span class="o">=</span> <span class="s1">&#39;test_videos_output/solidWhiteRight.mp4&#39;</span>
@@ -14941,7 +14941,7 @@ imageio.plugins.ffmpeg.download()</code></pre>
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|███████████████████████████████████████████████████████████████████████████████▋| 221/222 [00:02&lt;00:00, 97.53it/s]
+<pre>100%|███████████████████████████████████████████████████████████████████████████████▋| 221/222 [00:02&lt;00:00, 93.98it/s]
 </pre>
 </div>
 </div>
@@ -14953,7 +14953,7 @@ imageio.plugins.ffmpeg.download()</code></pre>
 <pre>[MoviePy] Done.
 [MoviePy] &gt;&gt;&gt;&gt; Video ready: test_videos_output/solidWhiteRight.mp4 
 
-Wall time: 2.5 s
+Wall time: 2.61 s
 </pre>
 </div>
 </div>
@@ -14974,7 +14974,7 @@ Wall time: 2.5 s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
@@ -14993,7 +14993,7 @@ Wall time: 2.5 s
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[9]:</div>
+<div class="prompt output_prompt">Out[16]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -15033,7 +15033,7 @@ Wall time: 2.5 s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">yellow_output</span> <span class="o">=</span> <span class="s1">&#39;test_videos_output/solidYellowLeft.mp4&#39;</span>
@@ -15069,7 +15069,7 @@ Wall time: 2.5 s
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████████████████████████████████████████████████████████████████████████▉| 681/682 [00:06&lt;00:00, 101.33it/s]
+<pre>100%|███████████████████████████████████████████████████████████████████████████████▉| 681/682 [00:07&lt;00:00, 87.34it/s]
 </pre>
 </div>
 </div>
@@ -15081,7 +15081,7 @@ Wall time: 2.5 s
 <pre>[MoviePy] Done.
 [MoviePy] &gt;&gt;&gt;&gt; Video ready: test_videos_output/solidYellowLeft.mp4 
 
-Wall time: 6.95 s
+Wall time: 8.02 s
 </pre>
 </div>
 </div>
@@ -15092,7 +15092,7 @@ Wall time: 6.95 s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
@@ -15111,7 +15111,7 @@ Wall time: 6.95 s
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[11]:</div>
+<div class="prompt output_prompt">Out[18]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -15197,7 +15197,7 @@ Wall time: 6.95 s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Build your pipeline that will draw lane lines on the test_images</span>
@@ -15214,7 +15214,7 @@ Wall time: 6.95 s
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">gray</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
 
 <span class="c1"># apply additional gaussian smoothing (canny applies also)</span>
-<span class="n">kernel_size</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">kernel_size</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">blur_gray</span> <span class="o">=</span> <span class="n">gaussian_blur</span><span class="p">(</span><span class="n">gray</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">)</span>
 
 <span class="c1"># define parameters and apply Canny</span>
@@ -15253,9 +15253,9 @@ Wall time: 6.95 s
 <span class="c1"># define parameters for hough transform</span>
 <span class="n">rho</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># distance resolution in pixels of the Hough grid</span>
 <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span> <span class="c1"># angular resolution in radians of the Hough grid</span>
-<span class="n">threshold</span> <span class="o">=</span> <span class="mi">30</span>     <span class="c1"># minimum number of votes (intersections in Hough grid cell)</span>
-<span class="n">min_line_length</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1">#minimum number of pixels making up a line</span>
-<span class="n">max_line_gap</span> <span class="o">=</span> <span class="mi">100</span>    <span class="c1"># maximum gap in pixels between connectable line segments</span>
+<span class="n">threshold</span> <span class="o">=</span> <span class="mi">50</span>     <span class="c1"># minimum number of votes (intersections in Hough grid cell)</span>
+<span class="n">min_line_length</span> <span class="o">=</span> <span class="mi">80</span> <span class="c1">#minimum number of pixels making up a line</span>
+<span class="n">max_line_gap</span> <span class="o">=</span> <span class="mi">200</span>    <span class="c1"># maximum gap in pixels between connectable line segments</span>
 
 <span class="c1"># apply hough transform</span>
 <span class="n">line_image</span> <span class="o">=</span> <span class="n">hough_lines</span><span class="p">(</span><span class="n">masked_edges</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">threshold</span><span class="p">,</span> <span class="n">min_line_length</span><span class="p">,</span> <span class="n">max_line_gap</span><span class="p">,</span> <span class="n">max_y</span><span class="p">,</span> <span class="n">min_y</span><span class="p">)</span>
@@ -15291,7 +15291,7 @@ Wall time: 6.95 s
 </div>
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[12]:</div>
+<div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -16631,7 +16631,7 @@ gg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#redefining process_image to take a mask variable</span>
@@ -16645,7 +16645,7 @@ gg==
     <span class="n">gray</span> <span class="o">=</span> <span class="n">grayscale</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 
     <span class="c1"># apply additional gaussian smoothing (canny applies also)</span>
-    <span class="n">kernel_size</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">kernel_size</span> <span class="o">=</span> <span class="mi">3</span>
     <span class="n">blur_gray</span> <span class="o">=</span> <span class="n">gaussian_blur</span><span class="p">(</span><span class="n">gray</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">)</span>
 
     <span class="c1"># define parameters and apply Canny</span>
@@ -16659,11 +16659,11 @@ gg==
     <span class="n">max_y</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">vertices</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
     <span class="c1"># define parameters for hough transform</span>
-    <span class="n">rho</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># distance resolution in pixels of the Hough grid</span>
+    <span class="n">rho</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># distance resolution in pixels of the Hough grid</span>
     <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span> <span class="c1"># angular resolution in radians of the Hough grid</span>
-    <span class="n">threshold</span> <span class="o">=</span> <span class="mi">15</span>     <span class="c1"># minimum number of votes (intersections in Hough grid cell)</span>
-    <span class="n">min_line_length</span> <span class="o">=</span> <span class="mi">40</span> <span class="c1">#minimum number of pixels making up a line</span>
-    <span class="n">max_line_gap</span> <span class="o">=</span> <span class="mi">20</span>    <span class="c1"># maximum gap in pixels between connectable line segments</span>
+    <span class="n">threshold</span> <span class="o">=</span> <span class="mi">55</span>     <span class="c1"># minimum number of votes (intersections in Hough grid cell)</span>
+    <span class="n">min_line_length</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1">#minimum number of pixels making up a line</span>
+    <span class="n">max_line_gap</span> <span class="o">=</span> <span class="mi">200</span>    <span class="c1"># maximum gap in pixels between connectable line segments</span>
 
     <span class="c1"># apply hough transform</span>
     <span class="n">line_image</span> <span class="o">=</span> <span class="n">hough_lines</span><span class="p">(</span><span class="n">masked_edges</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">threshold</span><span class="p">,</span> <span class="n">min_line_length</span><span class="p">,</span> <span class="n">max_line_gap</span><span class="p">,</span> <span class="n">max_y</span><span class="p">,</span> <span class="n">min_y</span><span class="p">)</span>
@@ -16681,7 +16681,7 @@ gg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">challenge_output</span> <span class="o">=</span> <span class="s1">&#39;test_videos_output/challenge.mp4&#39;</span>
@@ -16689,8 +16689,8 @@ gg==
 <span class="c1">## To do so add .subclip(start_second,end_second) to the end of the line below</span>
 <span class="c1">## Where start_second and end_second are integer values representing the start and end of the subclip</span>
 <span class="c1">## You may also uncomment the following line for a subclip of the first 5 seconds</span>
-<span class="n">clip3</span> <span class="o">=</span> <span class="n">VideoFileClip</span><span class="p">(</span><span class="s1">&#39;test_videos/challenge.mp4&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">subclip</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-<span class="c1">#clip3 = VideoFileClip(&#39;test_videos/challenge.mp4&#39;)</span>
+<span class="c1">#clip3 = VideoFileClip(&#39;test_videos/challenge.mp4&#39;).subclip(0,5)</span>
+<span class="n">clip3</span> <span class="o">=</span> <span class="n">VideoFileClip</span><span class="p">(</span><span class="s1">&#39;test_videos/challenge.mp4&#39;</span><span class="p">)</span>
 <span class="n">vertices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[(</span><span class="mi">270</span><span class="p">,</span><span class="mi">650</span><span class="p">),(</span><span class="mi">590</span><span class="p">,</span> <span class="mi">450</span><span class="p">),</span> <span class="p">(</span><span class="mi">730</span><span class="p">,</span> <span class="mi">450</span><span class="p">),</span> <span class="p">(</span><span class="mi">1130</span><span class="p">,</span><span class="mi">650</span><span class="p">)]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
 <span class="n">challenge_clip</span> <span class="o">=</span> <span class="n">clip3</span><span class="o">.</span><span class="n">fl_image</span><span class="p">(</span><span class="n">process_image</span><span class="p">)</span>
 <span class="o">%</span><span class="k">time</span> challenge_clip.write_videofile(challenge_output, audio=False)
@@ -16718,7 +16718,7 @@ gg==
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre> 99%|███████████████████████████████████████████████████████████████████████████████▎| 125/126 [00:02&lt;00:00, 43.45it/s]
+<pre>100%|████████████████████████████████████████████████████████████████████████████████| 251/251 [00:06&lt;00:00, 37.93it/s]
 </pre>
 </div>
 </div>
@@ -16730,7 +16730,7 @@ gg==
 <pre>[MoviePy] Done.
 [MoviePy] &gt;&gt;&gt;&gt; Video ready: test_videos_output/challenge.mp4 
 
-Wall time: 3.39 s
+Wall time: 7.05 s
 </pre>
 </div>
 </div>
